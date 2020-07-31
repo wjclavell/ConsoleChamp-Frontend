@@ -21,6 +21,10 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 This project will be a full CRUD application for Video Game Ratings. It will be similar to Rotten Tomatoes or Metacritic. Most likely I will focus just on console exclusive games.
 
+## Backend Repo
+
+[Backend](https://github.com/wjclavell/BackEnd-P2/blob/master/planning_directory/project-worksheet.md)
+
 ## User Stories
 
 - User can view all video games on the site
@@ -52,7 +56,7 @@ Wireframing Resources:
 
 The functionality will then be divided into two separate lists: MPV and PostMVP. Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.
 
-#### MVP (examples)
+#### MVP
 
 - mobile responsive first design
 - hamburger menu/nav bar
