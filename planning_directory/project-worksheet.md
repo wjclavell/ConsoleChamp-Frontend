@@ -54,46 +54,47 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 
 #### MVP (examples)
 
-- Pull data using google json api
-- Render data on page
-- Allow user to choose favorites
-- Save their choices in firebase
+- mobile responsive first design
+- hamburger menu/nav bar
+- button/event listeners
+- all page, console page, review page
+- add/edit modal
+- bootstrap for overall layout and design
+- jQuery and API intergration
 
 #### PostMVP
 
-- Anything else that is not MVP
+- genre section
+- animations
+- logo
 
 ## Functional Components
 
 Based on the initial logic defined in the previous sections try and breakdown the logic further into functional components, and by that we mean functions. Try and capture what logic would need to be defined if the game was broken down into the following categories.
 
-Time frames are also key in the development cycle. You have limited time to code all phases of the game. Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe.
-
 #### MVP
 
-| Component               | Priority | Estimated Time | Time Invetsted | Actual Time |
-| ----------------------- | :------: | :------------: | :------------: | :---------: |
-| Hamburger               |    H     |      1hr       |     1.5hr      |     -hr     |
-| Project Previews        |    H     |      3hr       |      -hr       |     -hr     |
-| Regular Nav             |    H     |       H        |      -hr       |     -hr     |
-| Adding Form             |    H     |     1.5hr      |      -hr       |     -hr     |
-| Other sections and flex |    M     |      4hr       |      2hr       |     -hr     |
-| Working with API        |    H     |      3hrs      |      2hr       |     -hr     |
-| Responsive              |    H     |      3hr       |      -hr       |     -hr     |
-| Social Media Icons      |    L     |      1hr       |      -hr       |     -hr     |
-| Total                   |    H     |    15.5hrs     |      -hrs      |    -hrs     |
+| Component        | Priority | Estimated Time | Time Invetsted | Actual Time |
+| ---------------- | :------: | :------------: | :------------: | :---------: |
+| Hamburger        |    H     |      2hr       |      -hr       |     -hr     |
+| All games page   |    H     |     1.5hr      |      -hr       |     -hr     |
+| Regular Nav      |    H     |      1hr       |      -hr       |     -hr     |
+| Game review page |    H     |     1.5hr      |      -hr       |     -hr     |
+| Add/edit modal   |    H     |      3hr       |      -hr       |     -hr     |
+| jQuery with API  |    H     |      3hrs      |      -hr       |     -hr     |
+| Responsive       |    H     |      2hr       |      -hr       |     -hr     |
+| Console page     |    H     |     1.5hr      |      -hr       |     -hr     |
+| Total            |    H     |    15.5hrs     |      -hrs      |    -hrs     |
 
 #### PostMVP
 
-| Component             | Priority | Estimated Time | Time Invetsted | Actual Time |
-| --------------------- | :------: | :------------: | :------------: | :---------: |
-| Project Hover         |    L     |      3hr       |      -hr       |     -hr     |
-| Banner letters wiggle |    L     |      1hr       |      -hr       |     -hr     |
-| Interactive Banner    |    M     |      4hr       |      -hr       |     -hr     |
-| Materialize           |    H     |      4hr       |      -hr       |     -hr     |
-| Bootstrap             |    H     |      4hr       |      -hr       |     -hr     |
-| Make own icon         |    L     |      4hr       |      -hr       |     -hr     |
-| Total                 |    H     |     20hrs      |      -hrs      |    -hrs     |
+| Component     | Priority | Estimated Time | Time Invetsted | Actual Time |
+| ------------- | :------: | :------------: | :------------: | :---------: |
+| Genre section |    M     |      2hr       |      -hr       |     -hr     |
+| Animations    |    L     |      3hr       |      -hr       |     -hr     |
+| Logo          |    L     |      2hr       |      -hr       |     -hr     |
+| Bootstrap     |    M     |      4hr       |      -hr       |     -hr     |
+| Total         |    H     |     11hrs      |      -hrs      |    -hrs     |
 
 ## Additional Libraries
 
