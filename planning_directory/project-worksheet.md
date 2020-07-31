@@ -8,8 +8,8 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 | Day   | Deliverable                                                      | Status     |
 | ----- | ---------------------------------------------------------------- | ---------- |
-| Day 1 | Project Description                                              | Incomplete |
-| Day 1 | Wireframes / Priority Matrix / Timeline `backend` and `frontend` | Incomplete |
+| Day 1 | Project Description                                              | Complete   |
+| Day 1 | Wireframes / Priority Matrix / Timeline `backend` and `frontend` | Complete   |
 | Day 2 | Working RestAPI                                                  | Incomplete |
 | Day 3 | Core Application Structure (HTML, CSS, etc.)                     | Incomplete |
 | Day 4 | MVP & Bug Fixes                                                  | Incomplete |
@@ -35,7 +35,8 @@ This project will be a full CRUD application for Video Game Ratings. It will be 
 
 Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Do not include the actual image and have it render on the page.
 
-- [Mobile](https://git.generalassemb.ly/SEIR-629/project-1-portfolio/blob/master/readme-assets/mobile.png)
+- [Mobile1](https://res.cloudinary.com/wjclavell/image/upload/v1596219606/project2-videogameratings/VGR_allgames_pze2ig.png)
+- [Mobile2](https://res.cloudinary.com/wjclavell/image/upload/v1596219743/project2-videogameratings/VideoGameRatings_qossv6.png)
 - [Tablet](https://git.generalassemb.ly/SEIR-629/project-1-portfolio/blob/master/readme-assets/nav-highlight.gif)
 - [Desktop](https://git.generalassemb.ly/SEIR-629/project-1-portfolio/blob/master/readme-assets/desktop.png)
 
