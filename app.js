@@ -18,6 +18,9 @@ const getGames = async () => {
   const response = await fetch(`${URL}/games`);
   const data = await response.json();
 
+  //empty the section to repopulate (for when returning to home screen)
+  $allgames.empty();
+
   data.forEach(async (game) => {
     //make a div with class game (will hold each game 'card') w/ background image of game
     const $game = $(`<div class="game"></div>`).css(
@@ -39,7 +42,9 @@ const getGames = async () => {
 
     //append rating and title to the game 'card'
     $game.append(`<div class="rating">${totalRating}%`);
-    $game.append(`<h5 class="title" id="${game._id}">${game.title}`);
+    $game.append(
+      `<h5 class="title" onclick="showOne()" id="${game._id}">${game.title}`
+    );
     $allgames.append($game);
   });
 };
@@ -75,10 +80,15 @@ const getConsoleGames = async () => {
 
     //append rating and title to the game 'card'
     $game.append(`<div class="rating">${totalRating}%`);
-    $game.append(`<h5 class="title" id="${game._id}">${game.title}`);
+    $game.append(
+      `<h5 class="title" onclick="showOne()" id="${game._id}">${game.title}`
+    );
     $allgames.append($game);
   });
 };
+
+//* display one game
+const showOne = async () => {};
 
 //main application logic
 
