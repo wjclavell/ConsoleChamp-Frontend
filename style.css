@@ -2,7 +2,7 @@
   font-family: Iceberg, sans-serif;
   font-size: 2em;
 }
-section {
+.allgames {
   width: 100vw;
   position: relative;
   top: 6em;
@@ -11,7 +11,7 @@ section {
   flex-wrap: wrap;
 }
 .game {
-  background-image: url("https://static.metacritic.com/images/products/games/3/976dc172a149f212d4b059e6eede1900-98.jpg");
+  /* background-image: url("https://static.metacritic.com/images/products/games/3/976dc172a149f212d4b059e6eede1900-98.jpg"); */
   background-position: center;
   background-size: cover;
   height: 250px;
