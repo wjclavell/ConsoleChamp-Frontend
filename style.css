@@ -1,0 +1,48 @@
+.navbar-brand {
+  font-family: Iceberg, sans-serif;
+  font-size: 2em;
+}
+section {
+  width: 100vw;
+  position: relative;
+  top: 6em;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.game {
+  background-image: url("https://static.metacritic.com/images/products/games/3/976dc172a149f212d4b059e6eede1900-98.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 250px;
+  width: 200px;
+  margin: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.rating {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 6em;
+  top: 2em;
+  height: 4em;
+  width: 4em;
+  border-radius: 2em;
+  background-color: #f26627;
+  color: white;
+}
+.title {
+  position: relative;
+  top: 2em;
+  font-family: Iceberg, sans-serif;
+  color: #f26627;
+  cursor: pointer;
+}
+.title:hover {
+  color: #f9a26c;
+}
