@@ -11,7 +11,6 @@
   flex-wrap: wrap;
 }
 .game {
-  /* background-image: url("https://static.metacritic.com/images/products/games/3/976dc172a149f212d4b059e6eede1900-98.jpg"); */
   background-position: center;
   background-size: cover;
   height: 250px;
@@ -38,7 +37,7 @@
 }
 .title {
   position: relative;
-  top: 2em;
+  top: 3em;
   font-family: Iceberg, sans-serif;
   color: #f26627;
   cursor: pointer;
