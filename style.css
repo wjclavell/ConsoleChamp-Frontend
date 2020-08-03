@@ -93,11 +93,22 @@ h3 {
 }
 .critics-container {
   margin: 0 4em;
+  margin-bottom: 5em;
+  color: #325d79;
+}
+.review-box {
   background-color: white;
   padding: 1em;
-  color: #325d79;
+  margin-bottom: 1em;
+  border-bottom: 3px solid #f26627;
+}
+.review-box a {
+  color: #9bd7d1;
+}
+.review-box a:hover {
+  color: #f26627;
 }
 .critic-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
