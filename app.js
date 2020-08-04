@@ -10,7 +10,7 @@ const $addgame = $("#addgame");
 const $showgame = $("#showgame");
 const $allgames = $(".allgames");
 const $onegame = $(".onegame");
-const $critcsContainer = $(".critics-container");
+const $criticsContainer = $(".critics-container");
 
 //functions
 
@@ -23,7 +23,7 @@ const getGames = async () => {
   //empty the section to repopulate (for when returning to home screen)
   $allgames.empty();
   $onegame.empty();
-  $critcsContainer.empty();
+  $criticsContainer.empty();
 
   data.forEach(async (game) => {
     //make a div with class game (will hold each game 'card') w/ background image of game
@@ -42,7 +42,7 @@ const getGames = async () => {
       return (totalRating += rating.rating);
     });
     //get average by diving by total number of ratings (hardcoded 5 for now)
-    let avgRating = totalRating / 5;
+    let avgRating = totalRating / data.criticRating.length;
 
     //append rating and title to the game 'card'
     $game.append(`<div class="rating">${avgRating}%`);
@@ -64,7 +64,7 @@ const getConsoleGames = async () => {
   //empty the section to repopulate with only console games
   $allgames.empty();
   $onegame.empty();
-  $critcsContainer.empty();
+  $criticsContainer.empty();
   data.forEach(async (game) => {
     //make a div with class game (will hold each game 'card') w/ background image of game
     const $game = $(`<div class="game"></div>`).css(
@@ -82,7 +82,7 @@ const getConsoleGames = async () => {
       return (totalRating += rating.rating);
     });
     //get average by diving by total number of ratings (hardcoded 5 for now)
-    let avgRating = totalRating / 5;
+    let avgRating = totalRating / data.criticRating.length;
 
     //append rating and title to the game 'card'
     $game.append(`<div class="rating">${avgRating}%`);
@@ -94,8 +94,9 @@ const getConsoleGames = async () => {
 };
 
 //* display one game
-const showOne = async () => {
-  const response = await fetch(`${URL}/games/${event.target.id}`);
+const showOne = async (e) => {
+  e = event.target.id;
+  const response = await fetch(`${URL}/games/${e}`);
   const data = await response.json();
   //empty the page sections to show just one game
   $allgames.empty();
@@ -106,8 +107,11 @@ const showOne = async () => {
   );
   //append the title and add symbol to the game
   $game.append(
-    `<h4 class="title" id="showgame">${data.title}</h4><i class="fas fa-plus-circle" id="${data._id}"></i>`
+    `<h4 class="title" id="showgame">${data.title}</h4><i class="fas fa-plus-circle" id="${data._id}" data-toggle="modal"
+    data-target="#addReviewModal"></i>`
   );
+  //give the modal submit button the id of the game to re run this page when pressed
+  $(".create-review").attr("id", data._id);
   //append it to the section
   $onegame.append($game);
   //append game description
@@ -119,7 +123,7 @@ const showOne = async () => {
   data.criticRating.forEach((rating) => {
     return (totalRating += rating.rating);
   });
-  let avgRating = totalRating / 5;
+  let avgRating = totalRating / data.criticRating.length;
   //create the rating footer with avg rating
   const $rating = $(`<div class="rating-foot">
     <h4>Rating</h4>
@@ -143,7 +147,7 @@ const showOne = async () => {
     const $reviewBox = $('<div class="review-box"></div>');
     $reviewBox.append($review);
     //apend each box to container
-    $critcsContainer.append($reviewBox);
+    $criticsContainer.append($reviewBox);
   });
 };
 
@@ -178,8 +182,43 @@ const createGame = async () => {
   getGames();
 };
 
+//* add new review
+const createReview = async () => {
+  const response = await fetch(`${URL}/games/${event.target.id}`);
+  const data = await response.json();
+
+  const $reviewRating = $("#review-rating");
+  const $reviewCritic = $("#review-critic");
+  const $reviewExcerpt = $("#review-excerpt");
+
+  const newReview = {
+    game: data.title,
+    rating: $reviewRating.val(),
+    critic: $reviewCritic.val(),
+    link: "gameratings.netlify.app",
+    excerpt: $reviewExcerpt.val(),
+  };
+
+  const res = await fetch(`${URL}/critics`, {
+    method: "post", // lets api know that we are making a post request
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(newReview),
+  });
+  res.json();
+
+  // update DOM with new game
+  $criticsContainer.empty(); //empty the list to repopulate
+  $onegame.empty();
+  showOne(data._id);
+};
+
 //main application logic
 
 //display all the games by invoking the function
 getGames();
+//when click submit in add game modal, will add game to page
 $("#create-game").on("click", createGame);
+//when click submit in create review modal, will add review to list
+$(".create-review").on("click", createReview);
