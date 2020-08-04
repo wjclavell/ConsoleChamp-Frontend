@@ -94,8 +94,8 @@ const getConsoleGames = async () => {
 };
 
 //* display one game
-const showOne = async () => {
-  const response = await fetch(`${URL}/games/${event.target.id}`);
+const showOne = async (id) => {
+  const response = await fetch(`${URL}/games/${event.target.id || id}`);
   const data = await response.json();
   //empty the page sections to show just one game
   $allgames.empty();
@@ -156,7 +156,8 @@ const showOne = async () => {
     <h5>${review.rating}</h5>
     </div>
     <p>${review.excerpt}</p>
-      <div class="buttons"><i class="fas fa-edit"></i><i class="fas fa-trash-alt"></i></div>`);
+      <div class="buttons"><i class="fas fa-edit" data-toggle="modal"
+      data-target="#editReviewModal" id="${review._id}"></i><i class="fas fa-trash-alt" id="${review._id}"></i></div>`);
     }
     const $reviewBox = $('<div class="review-box"></div>');
     //append each review to the box
@@ -226,10 +227,32 @@ const createReview = async () => {
   // update DOM with new game
   $criticsContainer.empty(); //empty the list to repopulate
   $onegame.empty();
-  showOne();
+  showOne(data._id);
 };
 
-//main application logic
+//*edit a user review
+const editReview = async () => {
+  const updatedReview = {
+    rating: $reviewRating.val(),
+    critic: $reviewCritic.val(),
+    excerpt: $reviewExcerpt.val(),
+  };
+
+  const response = await fetch(`${URL}/critics/${event.target.id}`, {
+    method: "put",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(updatedReview),
+  });
+
+  //idk howto access the id needed for oneGame() so just go back to all games for now
+  $onegame.empty();
+  $criticsContainer.empty();
+  getGames();
+};
+
+//*main application logic
 
 //display all the games by invoking the function
 getGames();
@@ -237,3 +260,5 @@ getGames();
 $("#create-game").on("click", createGame);
 //when click submit in create review modal, will add review to list
 $(".create-review").on("click", createReview);
+//when click submit the edit for the user review
+$(".edit-review").on("click", editReview);

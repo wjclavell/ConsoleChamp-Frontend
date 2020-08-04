@@ -207,7 +207,72 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="reviewModalLabel">New game</h5>
+            <h5 class="modal-title" id="reviewModalLabel">New Review</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="review-rating" class="col-form-label"
+                  >Rating:</label
+                >
+                <input type="text" class="form-control" id="review-rating" />
+              </div>
+              <div class="form-group">
+                <label for="review-critic" class="col-form-label"
+                  >Username:</label
+                >
+                <input type="text" class="form-control" id="review-critic" />
+              </div>
+              <div class="form-group">
+                <label for="review-excerpt" class="col-form-label"
+                  >Review:</label
+                >
+                <textarea class="form-control" id="review-excerpt"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+              style="background-color: #325d79;"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary edit-review"
+              style="background-color: #f26627;"
+            >
+              Create Review
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--EDIT REVIEW MODAL-->
+    <div
+      class="modal fade"
+      id="editReviewModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="editModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editModalLabel">Edit Review</h5>
             <button
               type="button"
               class="close"
@@ -253,7 +318,7 @@
               class="btn btn-primary create-review"
               style="background-color: #f26627;"
             >
-              Create Review
+              Edit Review
             </button>
           </div>
         </div>
