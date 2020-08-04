@@ -111,8 +111,7 @@ const showOne = async () => {
     viewBox="0 0 16 16"
     class="bi bi-plus-circle-fill"
     fill="currentColor"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+    xmlns="http://www.w3.org/2000/svg">
     <path
       fill-rule="evenodd"
       d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4a.5.5 0 0 0-1 0v3.5H4a.5.5 0 0 0 0 1h3.5V12a.5.5 0 0 0 1 0V8.5H12a.5.5 0 0 0 0-1H8.5V4z"
@@ -151,6 +150,24 @@ const showOne = async () => {
     //apend each box to container
     $critcsContainer.append($reviewBox);
   });
+};
+
+//* add a new game
+const createGame = async () => {
+  const $gameTitle = $("#game-title");
+  const $gameConsole = $("#game-console");
+  const $gameArt = $("#game-art");
+  const $gameGenre = $("#game-genre");
+  const $gameRelease = $("#game-release");
+  const $gameDesc = $("#game-desc");
+  const newGame = {
+    title: $gameTitle.val(),
+    console: $gameConsole.val(),
+    boxArt: $gameArt.val(),
+    genre: [$gameGenre.val()],
+    releaseDate: $gameRelease.val(),
+    description: $gameDesc.val(),
+  };
 };
 
 //main application logic

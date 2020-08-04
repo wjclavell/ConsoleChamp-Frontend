@@ -29,7 +29,12 @@
         <div class="p-4" style="background-color: #325d79;">
           <ul class="navbar-nav">
             <li class="nav-item active">
-              <a class="nav-link text-white" id="addgame" href="#"
+              <a
+                class="nav-link text-white"
+                id="addgame"
+                href="#"
+                data-toggle="modal"
+                data-target="#addGameModal"
                 >Add Game <span class="sr-only">(current)</span></a
               >
             </li>
@@ -120,6 +125,84 @@
       > -->
       </div>
     </section>
+
+    <div
+      class="modal fade"
+      id="addGameModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="gameModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="gameModalLabel">New game</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="game-title" class="col-form-label">Title:</label>
+                <input type="text" class="form-control" id="game-title" />
+              </div>
+              <div class="form-group">
+                <label for="game-console" class="col-form-label"
+                  >Console:</label
+                >
+                <input type="text" class="form-control" id="game-console" />
+              </div>
+              <div class="form-group">
+                <label for="game-art" class="col-form-label"
+                  >Box Art url:</label
+                >
+                <input type="text" class="form-control" id="game-art" />
+              </div>
+              <div class="form-group">
+                <label for="game-release" class="col-form-label"
+                  >Realease Date (ex: Mar 23, 2017):</label
+                >
+                <input type="text" class="form-control" id="game-release" />
+              </div>
+              <div class="form-group">
+                <label for="game-genre" class="col-form-label">Genre:</label>
+                <input type="text" class="form-control" id="game-genre" />
+              </div>
+              <div class="form-group">
+                <label for="game-desc" class="col-form-label"
+                  >Description:</label
+                >
+                <textarea class="form-control" id="game-desc"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+              style="background-color: #325d79;"
+            >
+              Close
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              style="background-color: #f26627;"
+            >
+              Create Game
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
