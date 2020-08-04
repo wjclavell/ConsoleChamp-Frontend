@@ -94,9 +94,8 @@ const getConsoleGames = async () => {
 };
 
 //* display one game
-const showOne = async (e) => {
-  e = event.target.id;
-  const response = await fetch(`${URL}/games/${e}`);
+const showOne = async () => {
+  const response = await fetch(`${URL}/games/${event.target.id}`);
   const data = await response.json();
   //empty the page sections to show just one game
   $allgames.empty();
@@ -132,8 +131,16 @@ const showOne = async (e) => {
   //append it to the section
   $onegame.append($rating);
   //create the critic review div
+  let $review; //declared here to allow access outside of if/else statements
   data.criticRating.forEach((review) => {
-    const $review = $(`<div class="critic-header">
+    if (
+      review.critic === "Destructoid" ||
+      review.critic === "Game Informer" ||
+      review.critic === "GameSpot" ||
+      review.critic === "GamesRadar+" ||
+      review.critic === "IGN"
+    ) {
+      $review = $(`<div class="critic-header">
     <h5>${review.critic}</h5>
     <h5>${review.rating}</h5>
     </div>
@@ -143,8 +150,19 @@ const showOne = async (e) => {
         href="${review.link}"
         >link to full review</a
       >`);
-    //append each critic review to the box
+    } else {
+      $review = $(`<div class="critic-header">
+    <h5>${review.critic}</h5>
+    <h5>${review.rating}</h5>
+    </div>
+    <p>${review.excerpt}</p>
+      <a
+        href="${review.link}"
+        >link to gameratings</a
+      ><button class="edit-your-review">Edit</button><button class="delete-your-review">Delete</button>`);
+    }
     const $reviewBox = $('<div class="review-box"></div>');
+    //append each review to the box
     $reviewBox.append($review);
     //apend each box to container
     $criticsContainer.append($reviewBox);
@@ -211,7 +229,7 @@ const createReview = async () => {
   // update DOM with new game
   $criticsContainer.empty(); //empty the list to repopulate
   $onegame.empty();
-  showOne(data._id);
+  showOne();
 };
 
 //main application logic
