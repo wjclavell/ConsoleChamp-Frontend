@@ -130,3 +130,26 @@ h3 {
   display: flex;
   justify-content: space-evenly;
 }
+.buttons {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  right: 5em;
+}
+.fa-edit {
+  color: #f26627;
+  margin: 0 1em;
+  transform: scale(1.5);
+}
+.fa-trash-alt {
+  color: #325d79;
+  margin: 0 1em;
+  transform: scale(1.5);
+}
+.fa-edit:hover {
+  color: #f9a26c;
+}
+.fa-trash-alt:hover {
+  color: #9bd7d1;
+}

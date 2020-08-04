@@ -159,7 +159,7 @@ const showOne = async () => {
       <a
         href="${review.link}"
         >link to gameratings</a
-      ><button class="edit-your-review">Edit</button><button class="delete-your-review">Delete</button>`);
+      ><div class="buttons"><i class="fas fa-edit"></i><i class="fas fa-trash-alt"></i></div>`);
     }
     const $reviewBox = $('<div class="review-box"></div>');
     //append each review to the box
