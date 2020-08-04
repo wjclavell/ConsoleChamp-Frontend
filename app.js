@@ -42,7 +42,7 @@ const getGames = async () => {
       return (totalRating += rating.rating);
     });
     //get average by diving by total number of ratings (hardcoded 5 for now)
-    let avgRating = totalRating / data.criticRating.length;
+    let avgRating = Math.floor(totalRating / data.criticRating.length);
 
     //append rating and title to the game 'card'
     $game.append(`<div class="rating">${avgRating}%`);
@@ -82,7 +82,7 @@ const getConsoleGames = async () => {
       return (totalRating += rating.rating);
     });
     //get average by diving by total number of ratings (hardcoded 5 for now)
-    let avgRating = totalRating / data.criticRating.length;
+    let avgRating = Math.floor(totalRating / data.criticRating.length);
 
     //append rating and title to the game 'card'
     $game.append(`<div class="rating">${avgRating}%`);
@@ -123,7 +123,7 @@ const showOne = async (e) => {
   data.criticRating.forEach((rating) => {
     return (totalRating += rating.rating);
   });
-  let avgRating = totalRating / data.criticRating.length;
+  let avgRating = Math.floor(totalRating / data.criticRating.length);
   //create the rating footer with avg rating
   const $rating = $(`<div class="rating-foot">
     <h4>Rating</h4>
@@ -195,7 +195,7 @@ const createReview = async () => {
     game: data.title,
     rating: $reviewRating.val(),
     critic: $reviewCritic.val(),
-    link: "gameratings.netlify.app",
+    link: "https://gameratings.netlify.app/",
     excerpt: $reviewExcerpt.val(),
   };
 
