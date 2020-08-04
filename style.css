@@ -97,6 +97,18 @@ h3 {
   background-color: white;
   color: #f26627;
 }
+.fa-plus-circle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 9em;
+  left: 6em;
+  transform: scale(4);
+  background-color: white;
+  border-radius: 50%;
+  color: #f26627;
+}
 .critics-container {
   margin: 0 4em;
   margin-bottom: 5em;
