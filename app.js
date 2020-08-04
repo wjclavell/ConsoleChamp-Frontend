@@ -168,9 +168,23 @@ const createGame = async () => {
     releaseDate: $gameRelease.val(),
     description: $gameDesc.val(),
   };
+
+  const response = await fetch(`${URL}/games`, {
+    method: "post", // lets api know that we are making a post request
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(newGame),
+  });
+  const data = response.json();
+
+  // update DOM with new game
+  $allgames.empty(); //empty the list to repopulate
+  getGames();
 };
 
 //main application logic
 
 //display all the games by invoking the function
 getGames();
+$("#create-game").on("click", createGame);
