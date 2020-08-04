@@ -67,6 +67,9 @@ body {
   top: -3em;
   text-align: center;
 }
+.desc > h6 {
+  color: #f9a26c;
+}
 .rating-foot {
   display: flex;
   width: 200px;
@@ -77,6 +80,9 @@ body {
 h3 {
   font-family: Iceberg, sans-serif;
   color: #f26627;
+}
+.rating-foot h3 {
+  font-size: 4em;
 }
 .bi-plus-circle-fill {
   position: relative;

@@ -119,6 +119,10 @@ const showOne = async () => {
   </svg>`);
   //append it to the section
   $onegame.append($game);
+  //append game description
+  $onegame.append(
+    `<div class=desc><h6>Release Date: ${data.releaseDate}</h6><p>${data.description}</p></div>`
+  );
   //get average critic score for the game
   let totalRating = 0;
   data.criticRating.forEach((rating) => {
