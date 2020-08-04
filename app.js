@@ -156,10 +156,7 @@ const showOne = async () => {
     <h5>${review.rating}</h5>
     </div>
     <p>${review.excerpt}</p>
-      <a
-        href="${review.link}"
-        >link to gameratings</a
-      ><div class="buttons"><i class="fas fa-edit"></i><i class="fas fa-trash-alt"></i></div>`);
+      <div class="buttons"><i class="fas fa-edit"></i><i class="fas fa-trash-alt"></i></div>`);
     }
     const $reviewBox = $('<div class="review-box"></div>');
     //append each review to the box

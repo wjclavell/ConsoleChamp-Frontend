@@ -131,21 +131,21 @@ h3 {
   justify-content: space-evenly;
 }
 .buttons {
-  display: inline-flex;
-  justify-content: space-between;
+  display: flex;
+  justify-content: space-around;
   align-items: center;
-  position: absolute;
-  right: 5em;
 }
 .fa-edit {
   color: #f26627;
   margin: 0 1em;
   transform: scale(1.5);
+  cursor: pointer;
 }
 .fa-trash-alt {
   color: #325d79;
   margin: 0 1em;
   transform: scale(1.5);
+  cursor: pointer;
 }
 .fa-edit:hover {
   color: #f9a26c;
