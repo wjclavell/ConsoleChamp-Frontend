@@ -158,12 +158,10 @@ const showOne = async () => {
     </div>
     <p>${review.excerpt}</p>
     <div class="buttons">
-    <svg id="${review._id}" data-toggle="modal"
-    data-target="#editReviewModal" style="color: #f26627;transform:scale(1.5)" #width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-pencil-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-    <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
-  </svg>
-      <button id="${review._id}" class="editbutton" onclick="deleteReview()">
+    <button id="${review._id}" class="editbutton" onclick="setEditId()" data-toggle="modal"
+    data-target="#editReviewModal">
+      edit</button>
+      <button id="${review._id}" class="deletebutton" onclick="deleteReview()">
       delete</button></div>`);
     }
     const $reviewBox = $('<div class="review-box"></div>');
@@ -233,10 +231,10 @@ const createReview = async () => {
   getGames();
 };
 
-// //function to create edit submit button with correct id
-// const setEditId = () => {
-//   $(".edit-review").attr("id", event.target.id);
-// };
+//*function to add correct id to edit submit button
+const setEditId = () => {
+  $(".edit-review").attr("id", event.target.id);
+};
 
 //*edit a user review
 const editReview = async () => {

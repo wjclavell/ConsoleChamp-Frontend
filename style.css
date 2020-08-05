@@ -157,6 +157,8 @@ h3 {
 }
 .editbutton {
   background-color: #f26627;
+  width: 4em;
+  height: 2em;
   color: white;
   border: none;
   padding: 0 0.5em;
@@ -167,4 +169,14 @@ h3 {
   color: white;
   border-radius: 1em;
   outline: none;
+}
+.deletebutton {
+  background-color: white;
+  color: #f9a26c;
+  border: 2px solid #f9a26c;
+  padding: 0 0.5em;
+  transition: 0.7s;
+}
+.deletebutton:hover {
+  border-radius: 1em;
 }
