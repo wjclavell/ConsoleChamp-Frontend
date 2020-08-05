@@ -10,9 +10,9 @@ You are **responsible** for scheduling time with your squad to seek approval for
 | ----- | ---------------------------------------------------------------- | ---------- |
 | Day 1 | Project Description                                              | Complete   |
 | Day 1 | Wireframes / Priority Matrix / Timeline `backend` and `frontend` | Complete   |
-| Day 2 | Working RestAPI                                                  | Incomplete |
-| Day 3 | Core Application Structure (HTML, CSS, etc.)                     | Incomplete |
-| Day 4 | MVP & Bug Fixes                                                  | Incomplete |
+| Day 2 | Working RestAPI                                                  | Complete   |
+| Day 3 | Core Application Structure (HTML, CSS, etc.)                     | Complete   |
+| Day 4 | MVP & Bug Fixes                                                  | Complete   |
 | Day 5 | Final Touches and Present                                        | Incomplete |
 
 ## Project Description
@@ -41,8 +41,6 @@ Upload images of wireframe to cloudinary and add the link here with a descriptio
 
 - [Mobile1](https://res.cloudinary.com/wjclavell/image/upload/v1596219606/project2-videogameratings/VGR_allgames_pze2ig.png)
 - [Mobile2](https://res.cloudinary.com/wjclavell/image/upload/v1596219743/project2-videogameratings/VideoGameRatings_qossv6.png)
-- [Tablet](https://git.generalassemb.ly/SEIR-629/project-1-portfolio/blob/master/readme-assets/nav-highlight.gif)
-- [Desktop](https://git.generalassemb.ly/SEIR-629/project-1-portfolio/blob/master/readme-assets/desktop.png)
 
 Wireframing Resources:
 
@@ -80,15 +78,15 @@ Based on the initial logic defined in the previous sections try and breakdown th
 
 | Component        | Priority | Estimated Time | Time Invetsted | Actual Time |
 | ---------------- | :------: | :------------: | :------------: | :---------: |
-| Hamburger        |    H     |      2hr       |      -hr       |     -hr     |
-| All games page   |    H     |     1.5hr      |      -hr       |     -hr     |
-| Regular Nav      |    H     |      1hr       |      -hr       |     -hr     |
-| Game review page |    H     |     1.5hr      |      -hr       |     -hr     |
-| Add/edit modal   |    H     |      3hr       |      -hr       |     -hr     |
-| jQuery with API  |    H     |      3hrs      |      -hr       |     -hr     |
-| Responsive       |    H     |      2hr       |      -hr       |     -hr     |
-| Console page     |    H     |     1.5hr      |      -hr       |     -hr     |
-| Total            |    H     |    15.5hrs     |      -hrs      |    -hrs     |
+| Hamburger        |    H     |      2hr       |     .25hr      |    .25hr    |
+| All games page   |    H     |     1.5hr      |      2hr       |     2hr     |
+| Regular Nav      |    H     |      1hr       |     .25hr      |    .25hr    |
+| Game review page |    H     |     1.5hr      |     2.5hr      |    2.5hr    |
+| Add/edit modal   |    H     |      3hr       |     1.5hr      |    1.5hr    |
+| jQuery with API  |    H     |      3hrs      |      12hr      |    12hr     |
+| Responsive       |    H     |      2hr       |      .5hr      |    .5hr     |
+| Console page     |    H     |     1.5hr      |      1hr       |     1hr     |
+| Total            |    H     |    15.5hrs     |     20hrs      |    20hrs    |
 
 #### PostMVP
 
@@ -97,31 +95,35 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | Genre section |    M     |      2hr       |      -hr       |     -hr     |
 | Animations    |    L     |      3hr       |      -hr       |     -hr     |
 | Logo          |    L     |      2hr       |      -hr       |     -hr     |
-| Bootstrap     |    M     |      4hr       |      -hr       |     -hr     |
+| Bootstrap     |    M     |      4hr       |      1hr       |     1hr     |
 | Total         |    H     |     11hrs      |      -hrs      |    -hrs     |
 
 ## Additional Libraries
 
-Use this section to list all supporting libraries and thier role in the project.
+- jQuery, for API frontend functionality
+- Bootstrap, for NavBar and Hamburger menu
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of an a brief description
+This block of code was used to generate the average rating for each game. I had to have two nested fetch requests and forEach statements in order to access the correct array of ratings. I then add each rating for that particular game and divided it by the number of total reviews. I then used that everage to display a singular rating for each game.
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+let totalRating = 0;
+  data.criticRating.forEach((rating) => {
+    return (totalRating += rating.rating);
+  });
+  let avgRating = Math.floor(totalRating / data.criticRating.length);
 ```
 
 ## Issues and Resolutions
 
-Use this section to list of all major issues encountered and their resolution.
+**ISSUE**: Only my GET requests were working originally
+**RESOLUTION**: Removed w=majority from mongoURI
 
-#### SAMPLE.....
+**ISSUE**: Could not access critic id from current submit button
+**RESOLUTION**: Created a function to add the id to that button when I click an initial edit button that has been assigned the id already
 
-**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier  
-**RESOLUTION**: Missing comma after first object in sources {} object
+**ISSUE** Update route is functioning, but edits are not being saved in the frontend
 
 ## Previous Project Worksheet
 
