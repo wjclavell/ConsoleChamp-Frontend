@@ -6,14 +6,18 @@ const URL = deployedURL ? deployedURL : "http://localhost:3000";
 const $ps4 = $("#ps4");
 const $xbox = $("#xbox");
 const $ns = $("#ns");
+
 const $addgame = $("#addgame");
 const $showgame = $("#showgame");
 const $allgames = $(".allgames");
+
 const $onegame = $(".onegame");
 const $criticsContainer = $(".critics-container");
+
 const $reviewRating = $("#review-rating");
 const $reviewCritic = $("#review-critic");
 const $reviewExcerpt = $("#review-excerpt");
+
 const $editReviewRating = $("#edit-review-rating");
 const $editReviewCritic = $("#edit-review-critic");
 const $editReviewExcerpt = $("#edit-review-excerpt");
@@ -161,11 +165,13 @@ const showOne = async () => {
     </div>
     <p>${review.excerpt}</p>
     <div class="buttons">
+    <div class="editicons">
     <button id="${review._id}" class="editbutton" onclick="setEditId()" data-toggle="modal"
     data-target="#editReviewModal">
-      edit</button>
+      edit</button><i class="fas fa-edit"></i></div>
+      <div class="deleteicons">
       <button id="${review._id}" class="deletebutton" onclick="deleteReview()">
-      delete</button></div>`);
+      delete</button><i class="fas fa-trash-alt"></i></div></div>`);
     }
     const $reviewBox = $('<div class="review-box"></div>');
     //append each review to the box
@@ -235,7 +241,7 @@ const createReview = async () => {
 };
 
 //*function to add correct id to edit submit button
-const setEditId = () => {
+const setEditId = async () => {
   $(".edit-review").attr("id", event.target.id);
 };
 
@@ -247,7 +253,7 @@ const editReview = async () => {
     excerpt: $editReviewExcerpt.val(),
   };
 
-  const res = await fetch(
+  await fetch(
     `${URL}/critics/${event.target.id}`,
     console.log(`${URL}/critics/${event.target.id}`),
     {
