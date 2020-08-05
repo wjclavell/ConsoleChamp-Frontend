@@ -14,6 +14,9 @@ const $criticsContainer = $(".critics-container");
 const $reviewRating = $("#review-rating");
 const $reviewCritic = $("#review-critic");
 const $reviewExcerpt = $("#review-excerpt");
+const $editReviewRating = $("#edit-review-rating");
+const $editReviewCritic = $("#edit-review-critic");
+const $editReviewExcerpt = $("#edit-review-excerpt");
 
 //functions
 
@@ -239,18 +242,22 @@ const setEditId = () => {
 //*edit a user review
 const editReview = async () => {
   const updatedReview = {
-    rating: $reviewRating.val(),
-    critic: $reviewCritic.val(),
-    excerpt: $reviewExcerpt.val(),
+    rating: $editReviewRating.val(),
+    critic: $editReviewCritic.val(),
+    excerpt: $editReviewExcerpt.val(),
   };
 
-  const response = await fetch(`${URL}/critics/${event.target.id}`, {
-    method: "put",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(updatedReview),
-  });
+  const res = await fetch(
+    `${URL}/critics/${event.target.id}`,
+    console.log(`${URL}/critics/${event.target.id}`),
+    {
+      method: "put",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updatedReview),
+    }
+  );
 
   //idk howto access the id needed for oneGame() so just go back to all games for now
   $onegame.empty();
