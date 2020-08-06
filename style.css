@@ -1,5 +1,9 @@
 body {
   background-color: #efeeee;
+  margin: 0;
+}
+#CClogo {
+  transform: scale(0.25);
 }
 .navbar-brand {
   font-family: Iceberg, sans-serif;
@@ -10,7 +14,7 @@ body {
 .allgames {
   width: 100vw;
   position: relative;
-  top: 6em;
+  top: -7em;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -54,7 +58,7 @@ body {
 /*ONE GAME PAGE*/
 .onegame {
   margin: 4em;
-  margin-top: 7em;
+  margin-top: -4em;
   margin-bottom: 2em;
   display: flex;
   flex-direction: column;
@@ -171,4 +175,38 @@ h3 {
   border-radius: 1em;
   color: #9bd7d1;
   border: 2px solid #9bd7d1;
+}
+/* footer {
+  background-color: #f9a26c;
+  height: 3em;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer img {
+  height: 2em;
+}
+footer p {
+  margin: auto 0;
+  color: white;
+}
+footer a {
+  color: #325d79;
+}
+footer a i {
+  padding: 0 1em;
+  color: #325d79;
+} */
+
+@media only screen and (max-width: 750px) {
+  #CClogo {
+    display: none;
+  }
+  .allgames {
+    top: 6em;
+  }
+  .onegame {
+    margin-top: 7em;
+  }
 }
