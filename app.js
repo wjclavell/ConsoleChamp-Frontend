@@ -10,6 +10,7 @@ const $ns = $("#ns");
 const $addgame = $("#addgame");
 const $showgame = $("#showgame");
 const $allgames = $(".allgames");
+const $rankings = $(".rankings");
 
 const $onegame = $(".onegame");
 const $criticsContainer = $(".critics-container");
@@ -34,6 +35,7 @@ const getGames = async () => {
   $allgames.empty();
   $onegame.empty();
   $criticsContainer.empty();
+  $rankings.empty();
 
   data.forEach(async (game) => {
     //make a div with class game (will hold each game 'card') w/ background image of game
@@ -74,6 +76,8 @@ const getConsoleGames = async () => {
   $allgames.empty();
   $onegame.empty();
   $criticsContainer.empty();
+  $rankings.empty();
+
   data.forEach(async (game) => {
     //make a div with class game (will hold each game 'card') w/ background image of game
     const $game = $(`<div class="game"></div>`).css(
@@ -107,6 +111,7 @@ const showOne = async () => {
   const data = await response.json();
   //empty the page sections to show just one game
   $allgames.empty();
+  $rankings.empty();
   //create div of game
   const $game = $(`<div class="game"></div>`).css(
     "background-image",
@@ -177,7 +182,7 @@ const showOne = async () => {
     //append each review to the box
     $reviewBox.append($review);
     //apend each box to container
-    $criticsContainer.append($reviewBox);
+    $criticsContainer.css("display", "block").append($reviewBox);
   });
 };
 
@@ -209,6 +214,7 @@ const createGame = async () => {
 
   // update DOM with new game
   $allgames.empty(); //empty the list to repopulate
+  $rankings.empty();
   getGames();
 };
 
@@ -237,6 +243,7 @@ const createReview = async () => {
   // update DOM with new game
   $criticsContainer.empty(); //empty the list to repopulate
   $onegame.empty();
+  $rankings.empty();
   getGames();
 };
 
@@ -264,6 +271,7 @@ const editReview = async () => {
   //idk howto access the id needed for oneGame() so just go back to all games for now
   $onegame.empty();
   $criticsContainer.empty();
+  $rankings.empty();
   getGames();
 };
 
@@ -274,9 +282,15 @@ const deleteReview = async () => {
   });
   $onegame.empty();
   $criticsContainer.empty();
+  $rankings.empty();
   getGames();
 };
 
+const consoleRank = async () => {
+  ps4Rank();
+  xboxRank();
+  switchRank();
+};
 //*main application logic
 
 //display all the games by invoking the function

@@ -64,6 +64,8 @@
                 class="nav-link text-white"
                 id="ps4"
                 onclick="getConsoleGames()"
+                data-toggle="collapse"
+                data-target="#navbarToggleExternalContent"
                 >PS4</a
               >
             </li>
@@ -72,12 +74,29 @@
                 class="nav-link text-white"
                 id="xbox"
                 onclick="getConsoleGames()"
+                data-toggle="collapse"
+                data-target="#navbarToggleExternalContent"
                 >Xbox One</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" id="ns" onclick="getConsoleGames()"
+              <a
+                class="nav-link text-white"
+                id="ns"
+                onclick="getConsoleGames()"
+                data-toggle="collapse"
+                data-target="#navbarToggleExternalContent"
                 >Nintendo Switch</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-white"
+                id="ranks"
+                onclick="consoleRank()"
+                data-toggle="collapse"
+                data-target="#navbarToggleExternalContent"
+                >See which console is in the lead!</a
               >
             </li>
           </ul>
@@ -102,7 +121,22 @@
       </nav>
     </div>
     <!--LOGO-->
-    <img id="CClogo" src="./assets/ConsoleChamp.svg" />
+    <img id="CClogo" onclick="getGames()" src="./assets/ConsoleChamp.svg" />
+
+    <section class="rankings">
+      <!-- <div class="rank">
+        <p>PS4 <em>90%</em></p>
+        <progress max="100" value="90"></progress>
+      </div>
+      <div class="rank">
+        <p>Xbox One <em> 86%</em></p>
+        <progress max="100" value="86"></progress>
+      </div>
+      <div class="rank">
+        <p>Nintendo Switch <em> 82%</em></p>
+        <progress max="100" value="82"></progress>
+      </div> -->
+    </section>
 
     <section class="allgames">
       <!-- <div class="game">
@@ -122,7 +156,7 @@
         <h3>93%</h3>
       </div> -->
     </section>
-    <section class="critics-container">
+    <section style="display: none;" class="critics-container">
       <div class="review-box">
         <!-- <div class="critic-header">
         <h5>Game Informer</h5>
@@ -396,5 +430,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="./app.js"></script>
+    <script src="./ranks.js"></script>
   </body>
 </html>

@@ -10,6 +10,56 @@ body {
   font-size: 2em;
 }
 
+/*RANKINGS*/
+.rankings {
+  position: relative;
+  top: 6em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.rank {
+  display: flex;
+  align-items: baseline;
+}
+.rank p {
+  font-family: Iceberg, sans-serif;
+  font-size: 2em;
+  color: #325d79;
+  margin: auto 1em;
+  width: 300px;
+}
+.rank em {
+  font-size: larger;
+  text-decoration: underline;
+  text-decoration-color: #9bd7d1;
+  color: #325d79;
+}
+progress {
+  border: none;
+  color: #f26627;
+  height: 2em;
+  width: 50vw;
+  margin: 1em 0;
+}
+
+progress::-webkit-progress-value {
+  background: #f26627;
+}
+
+progress::-moz-progress-bar {
+  background: #f9a26c;
+}
+
+progress::-webkit-progress-value {
+  background: #f26627;
+}
+
+progress::-webkit-progress-bar {
+  background: #f9a26c;
+}
+
 /*ALL GAMES PAGE*/
 .allgames {
   width: 100vw;
@@ -199,9 +249,15 @@ footer a i {
   color: #325d79;
 } */
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 800px) {
   #CClogo {
     display: none;
+  }
+  .rankings {
+    top: 8em;
+  }
+  .rank {
+    flex-direction: column;
   }
   .allgames {
     top: 6em;
