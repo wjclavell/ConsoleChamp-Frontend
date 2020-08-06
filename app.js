@@ -287,6 +287,7 @@ const deleteReview = async () => {
 };
 
 const consoleRank = async () => {
+  $rankings.empty();
   ps4Rank();
   xboxRank();
   switchRank();

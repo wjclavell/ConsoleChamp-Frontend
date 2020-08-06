@@ -29,8 +29,8 @@ const ps4Rank = async () => {
     consoleRating = Math.floor(overallRating / data.length);
     //append rating and title to the game 'card'
     $rankings.append(`<div class="rank">
-    <p>PS4:<em> ${consoleRating}</em></p>
-    <progress max="100" value="${consoleRating}"></progress>
+    <p>PS4:<em> ${+consoleRating.toFixed(2)}</em></p>
+    <progress max="100" value="${+consoleRating.toFixed(2)}"></progress>
   </div>`);
   }, 500);
 };
@@ -66,8 +66,8 @@ const xboxRank = async () => {
     consoleRating = Math.floor(overallRating / data.length);
     //append rating and title to the game 'card'
     $rankings.append(`<div class="rank">
-    <p>Xbox One:<em> ${consoleRating}</em></p>
-    <progress max="100" value="${consoleRating}"></progress>
+    <p>Xbox One:<em> ${+consoleRating.toFixed(2)}</em></p>
+    <progress max="100" value="${+consoleRating.toFixed(2)}"></progress>
   </div>`);
   }, 500);
 };
@@ -103,8 +103,8 @@ const switchRank = async () => {
     consoleRating = Math.floor(overallRating / data.length);
     //append rating and title to the game 'card'
     $rankings.append(`<div class="rank">
-    <p>Nintendo Switch:<em> ${consoleRating}</em></p>
-    <progress max="100" value="${consoleRating}"></progress>
+    <p>Nintendo Switch:<em> ${+consoleRating.toFixed(2)}</em></p>
+    <progress max="100" value="${+consoleRating.toFixed(2)}"></progress>
   </div>`);
   }, 500);
 };
