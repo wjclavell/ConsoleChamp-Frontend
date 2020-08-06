@@ -16,7 +16,7 @@
 4. [Screenshots](#screenshots)
 5. [Technologies Used](#techused)
 6. [Database Structure](#dbstructure)
-7. [Backend Repo](#backend)
+7. [Backend Repo](#backendrepo)
 
 <a name="appdescription">
 
@@ -143,7 +143,7 @@ const criticSchema = new Schema(
 
 ### View backend repo here :
 
-<a name="backend">
+<a name="backendrepo">
 
 [Backend](https://github.com/wjclavell/BackEnd-P2)
 
