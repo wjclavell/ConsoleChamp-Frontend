@@ -31,7 +31,7 @@ This app is a rating/review site, similar to Rotten Tomatoes. It focuses on cons
 #### Current:
 
 - User can view all video games on the site
-- User can click a category (PS4, Nintendo Switch, XBOX One) to filter games for that system
+- User can click a category (PS4, Nintendo Switch, Xbox One) to filter games for that system
 - User can click a game to view critic reviews and information about that game
 - User can click a link in each critic review to view the full review by that critic
 - User can create a user review for selected game
@@ -41,7 +41,7 @@ This app is a rating/review site, similar to Rotten Tomatoes. It focuses on cons
 #### Future Implementations:
 
 - User can click genre type to filter selection by genre (genres are already in database)
-- User login/signup tobe able to have review ONLY associated witht them
+- User login/signup to be able to have review ONLY associated with them
 - User can favorite certain games that they like
 - User can view an infographic showing current overall stats for each console (ie: Average all overall game reviews for each console to determine an average console rating)
 
@@ -147,6 +147,6 @@ const criticSchema = new Schema(
 
 [Backend](https://github.com/wjclavell/BackEnd-P2)
 
-<a href="https://consolechamp.netlify.app"><img src=".assets/console-champ-alt.svg"></a>
+<a href="https://consolechamp.netlify.app"><img src="./assets/console-champ-alt.svg"></a>
 
 [back to top](#top)
