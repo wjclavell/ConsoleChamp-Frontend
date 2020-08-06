@@ -69,6 +69,7 @@ The functionality will then be divided into two separate lists: MPV and PostMVP.
 - genre section
 - animations
 - logo
+- console ranking page
 
 ## Functional Components
 
@@ -83,20 +84,21 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | Regular Nav      |    H     |      1hr       |     .25hr      |    .25hr    |
 | Game review page |    H     |     1.5hr      |     2.5hr      |    2.5hr    |
 | Add/edit modal   |    H     |      3hr       |     1.5hr      |    1.5hr    |
-| jQuery with API  |    H     |      3hrs      |      12hr      |    12hr     |
+| jQuery with API  |    H     |      3hrs      |      15hr      |    15hr     |
 | Responsive       |    H     |      2hr       |      .5hr      |    .5hr     |
 | Console page     |    H     |     1.5hr      |      1hr       |     1hr     |
 | Total            |    H     |    15.5hrs     |     20hrs      |    20hrs    |
 
 #### PostMVP
 
-| Component     | Priority | Estimated Time | Time Invetsted | Actual Time |
-| ------------- | :------: | :------------: | :------------: | :---------: |
-| Genre section |    M     |      2hr       |      -hr       |     -hr     |
-| Animations    |    L     |      3hr       |      -hr       |     -hr     |
-| Logo          |    L     |      2hr       |      -hr       |     -hr     |
-| Bootstrap     |    M     |      4hr       |      1hr       |     1hr     |
-| Total         |    H     |     11hrs      |      -hrs      |    -hrs     |
+| Component       | Priority | Estimated Time | Time Invetsted | Actual Time |
+| --------------- | :------: | :------------: | :------------: | :---------: |
+| Genre section   |    M     |      2hr       |      -hr       |     -hr     |
+| Animations      |    L     |      3hr       |      -hr       |     -hr     |
+| Logo            |    L     |      2hr       |     1.5hr      |    1.5hr    |
+| Bootstrap       |    M     |      4hr       |      1hr       |     1hr     |
+| Console Ranking |    M     |      4hr       |      6hr       |     6hr     |
+| Total           |    H     |     11hrs      |     8.5hrs     |    -hrs     |
 
 ## Additional Libraries
 
