@@ -14,6 +14,7 @@
 4. [Screenshots](#screenshots)
 5. [Technologies Used](#techused)
 6. [Database Structure](#dbstructure)
+7. [Backend Repo](#backend)
 
 <a name="appdescription">
 
@@ -91,7 +92,7 @@ This app is a rating/review site, similar to Rotten Tomatoes. It focuses on cons
 
 ## Database Structure
 
-#### Game Schema
+### Game Schema
 
 ```JS
 const gameSchema = new Schema(
@@ -121,7 +122,7 @@ const gameSchema = new Schema(
 
 **With full CRUD controllers/routes along with showing one game and filter by console. References to critic collecion and user collection (user collection is currently created but not yet implemented)**
 
-#### Critic Schema
+### Critic Schema
 
 ```JS
 const criticSchema = new Schema(
