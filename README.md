@@ -2,6 +2,8 @@
 
 **By William Clavell**
 
+<a name="top">
+
 ##### consolechamp live site:
 
 <a href="https://consolechamp.netlify.app/"><img src="./assets/ConsoleChamp-orange.svg"></a>
@@ -36,7 +38,7 @@ This app is a rating/review site, similar to Rotten Tomatoes. It focuses on cons
 - User can delete and update their own reviews
 - User can add a game to the list and edit the content
 
-#### Future Implementations
+#### Future Implementations:
 
 - User can click genre type to filter selection by genre (genres are already in database)
 - User login/signup tobe able to have review ONLY associated witht them
@@ -143,4 +145,8 @@ const criticSchema = new Schema(
 
 ### View backend repo here :
 
-[Backend]("https://github.com/wjclavell/BackEnd-P2")
+[Backend](https://github.com/wjclavell/BackEnd-P2)
+
+<a href="https://consolechamp.netlify.app"><img src=".assets/console-champ-alt.svg"></a>
+
+[back to top](#top)
