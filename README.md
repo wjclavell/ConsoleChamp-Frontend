@@ -53,13 +53,13 @@ This app is a rating/review site, similar to Rotten Tomatoes. It focuses on cons
 
 ## Screenshots of App
 
-**home page displaying all games**
+**Home page displaying all games:**
 <img src="https://res.cloudinary.com/wjclavell/image/upload/v1596725297/project2-videogameratings/allgames_cqumwl.png">
 
-**game description page**
+**Game description page:**
 <img src ="https://res.cloudinary.com/wjclavell/image/upload/v1596725297/project2-videogameratings/gamedesc_m5q66o.png">
 
-**game review page**
+**Game review page:**
 <img src="https://res.cloudinary.com/wjclavell/image/upload/v1596725296/project2-videogameratings/gamereviews_jj8faj.png">
 
 <a name="techused">
@@ -118,3 +118,28 @@ const gameSchema = new Schema(
   { timestamps: true }
 );
 ```
+
+**With full CRUD controllers/routes along with showing one game and filter by console. References to critic collecion and user collection (user collection is currently created but not yet implemented)**
+
+#### Critic Schema
+
+```JS
+const criticSchema = new Schema(
+  {
+    game: { type: String, required: true },
+    rating: { type: Number, required: true },
+    critic: { type: String, required: true },
+    link: { type: String, required: true },
+    excerpt: { type: String, required: true },
+  },
+  { timestamps: true }
+);
+```
+
+**With full CRUD controllers/routes**
+
+<a name="backend">
+
+### View backend repo here :
+
+[Backend]("https://github.com/wjclavell/BackEnd-P2")
