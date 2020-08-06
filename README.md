@@ -6,7 +6,7 @@
 
 ##### consolechamp live site:
 
-<a href="https://consolechamp.netlify.app/"><img src="./assets/ConsoleChamp-orange.svg"></a>
+<a target="_blank" href="https://consolechamp.netlify.app/"><img src="./assets/ConsoleChamp-orange.svg"></a>
 
 ## Contents:
 
@@ -147,6 +147,6 @@ const criticSchema = new Schema(
 
 [Backend](https://github.com/wjclavell/BackEnd-P2)
 
-<a href="https://consolechamp.netlify.app"><img src="./assets/console-champ-alt.svg"></a>
+<a target="_blank" href="https://consolechamp.netlify.app"><img src="./assets/console-champ-alt.svg"></a>
 
 [back to top](#top)
