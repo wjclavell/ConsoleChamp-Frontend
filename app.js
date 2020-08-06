@@ -253,14 +253,13 @@ const editReview = async () => {
     excerpt: $editReviewExcerpt.val(),
   };
 
-  const response = await fetch(`${URL}/critics/${event.target.id}`, {
+  await fetch(`${URL}/critics/${event.target.id}`, {
     method: "put",
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(updatedReview),
   });
-  response.json();
 
   //idk howto access the id needed for oneGame() so just go back to all games for now
   $onegame.empty();
