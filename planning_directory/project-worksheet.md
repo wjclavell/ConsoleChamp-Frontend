@@ -19,7 +19,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 [Netlify url](https://flamboyant-ramanujan-b00f82.netlify.app/)
 
-This project will be a full CRUD application for Video Game Ratings. It will be similar to Rotten Tomatoes or Metacritic. As a differentiating factor, I am choosing to focus only on console exclusive games (games that ONLY releasefor one console) and have a sort of 'ranking' to see which video game console offers the best exclusives.
+This project will be a full CRUD application for Video Game Ratings. It will be similar to Rotten Tomatoes or Metacritic. As a differentiating factor, I am choosing to focus only on console exclusive games (games that ONLY release for one console) and have a sort of 'ranking' to see which video game console offers the best exclusives.
 
 ## Backend Repo
 
