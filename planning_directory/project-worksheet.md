@@ -19,7 +19,7 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 [Netlify url](https://flamboyant-ramanujan-b00f82.netlify.app/)
 
-This project will be a full CRUD application for Video Game Ratings. It will be similar to Rotten Tomatoes or Metacritic. Most likely I will focus just on console exclusive games.
+This project will be a full CRUD application for Video Game Ratings. It will be similar to Rotten Tomatoes or Metacritic. As a differentiating factor, I am choosing to focus only on console exclusive games (games that ONLY releasefor one console) and have a sort of 'ranking' to see which video game console offers the best exclusives.
 
 ## Backend Repo
 
@@ -97,8 +97,8 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | Animations      |    L     |      3hr       |      -hr       |     -hr     |
 | Logo            |    L     |      2hr       |     1.5hr      |    1.5hr    |
 | Bootstrap       |    M     |      4hr       |      1hr       |     1hr     |
-| Console Ranking |    M     |      4hr       |      6hr       |     6hr     |
-| Total           |    H     |     11hrs      |     8.5hrs     |    -hrs     |
+| Console Ranking |    M     |     2.5hr      |      6hr       |     6hr     |
+| Total           |    H     |    13.5hrs     |     8.5hrs     |    -hrs     |
 
 ## Additional Libraries
 
@@ -107,7 +107,7 @@ Based on the initial logic defined in the previous sections try and breakdown th
 
 ## Code Snippet
 
-This block of code was used to generate the average rating for each game. I had to have two nested fetch requests and forEach statements in order to access the correct array of ratings. I then add each rating for that particular game and divided it by the number of total reviews. I then used that everage to display a singular rating for each game.
+This block of code was used to generate the average rating for each game. I had to have two nested fetch requests and forEach statements in order to access the correct array of ratings. I then add each rating for that particular game and divided it by the number of total reviews. I then used that everage to display a singular rating for each game. ( in order to get the 'console rankings' I had to then add up all the average ratings for each Game, for each Console)
 
 ```
 let totalRating = 0;
@@ -126,6 +126,7 @@ let totalRating = 0;
 **RESOLUTION**: Created a function to add the id to that button when I click an initial edit button that has been assigned the id already
 
 **ISSUE** Update route is functioning, but edits are not being saved in the frontend
+**RESOLUTION** I had a console.log to check that the url of the route was correct,but it was placed between my fetch and put request, which was preventing it from running correctly. (funny how what was meant to detect errors, was actually causing one)
 
 ## Previous Project Worksheet
 
