@@ -9,6 +9,12 @@ body {
   font-family: Iceberg, sans-serif;
   font-size: 2em;
 }
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+}
 
 /*RANKINGS*/
 .rankings {
