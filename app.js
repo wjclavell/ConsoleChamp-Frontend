@@ -39,10 +39,9 @@ const getGames = async () => {
 
   data.forEach(async (game) => {
     //make a div with class game (will hold each game 'card') w/ background image of game
-    const $game = $(`<div class="game"></div>`).css(
-      "background-image",
-      `url(${game.boxArt})`
-    );
+    const $game = $(
+      `<div onclick="showOne()" id="${game._id}" class="game"></div>`
+    ).css("background-image", `url(${game.boxArt})`);
     //get each individual game as json (which now includes populated critic ratings)
     const response = await fetch(`${URL}/games/${game._id}`);
     const data = await response.json();
@@ -57,9 +56,7 @@ const getGames = async () => {
 
     //append rating and title to the game 'card'
     $game.append(`<div class="rating">${avgRating}%`);
-    $game.append(
-      `<h5 class="title" onclick="showOne()" id="${game._id}">${game.title}`
-    );
+    $game.append(`<h5 id="${game._id}" class="title" >${game.title}`);
     $allgames.append($game);
   });
 };
